@@ -1,0 +1,15 @@
+# Project 1- Sales Analysis with Pandas + Matplotlib
+This is the first python project, this project conducts a Sales Analysis using Pandas and Matplotlib
+There are 4 Questions in this project:
+
+What was the best month for sales? How much was earned that month?
+What City had the highest number of sales ?
+What time should we display advertisements to maximize likelihood of customer's buying product?
+What products sold the most? Why do you think it sold the most?
+Attached Files:
+
+PDF file of the Sales Analysis Project
+Project 1- Sales Analysis with Pandas + Matplotlib.ipynb - Colaboratory.pdf
+Data
+all_data.csv
+Data Source: https://www.youtube.com/watch?v=eMOA1pPVUc4
