@@ -8,3 +8,4 @@ This is the first python project, this project conducts a Sales Analysis using P
 
 
 Data Source: https://www.youtube.com/watch?v=eMOA1pPVUc4
+Data : all_data.csv
