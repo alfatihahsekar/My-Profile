@@ -35,15 +35,24 @@ Quest: https://discuss.codecademy.com/t/data-science-independent-project-1-watch
 
 
 # SQL Project 2 - Basic Exploratory Analysis with Pandas + Matplotlib + Seaborn
-This is the second Python project, this project conducts a basic exploratory analysis of Roller Coaster data in the USA using Pandas, Matplotlib, and Seaborn
-**There are 5 Steps in this project:**
-1. Data Understanding
-2. Data Preparation
-4. Feature Understanding: Univariate Analysis
-5. Feature Relationships
-6. Answer Question: What are the Locations with the fastest roller coasters?
+**Analyzing the Data:**
 
-Data Source: https://www.kaggle.com/datasets/robikscube/rollercoaster-database/
+* Which tracks appeared in the most playlists? how many playlist did they appear in?
+* Which track generated the most revenue? which album? which genre?
+* Which countries have the highest sales revenue? What percent of total revenue does each country make up?
+* How many customers did each employee support, what is the average revenue for each sale, and what is their total sale?
+
+**Intermediate Challenge**
+
+* Do longer or shorter length albums tend to generate more revenue?
+* Is the number of times a track appear in any playlist a good indicator of sales?
 
 
-Data: coaster_db.csv
+**Advanced Challenge**
+
+* How much revenue is generated each year, and what is its from the previous year?
+ 
+Data Source: http://www.sqlitetutorial.net/sqlite-sample-database/
+
+
+Quest: https://discuss.codecademy.com/t/data-science-independent-project-2-explore-a-sample-database/419945
