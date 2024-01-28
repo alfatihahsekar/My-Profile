@@ -34,7 +34,7 @@ Data Source: https://www.cnbc.com/stocks/
 Quest: https://discuss.codecademy.com/t/data-science-independent-project-1-watching-the-stock-market/419943
 
 
-# SQL Project 2 - Basic Exploratory Analysis with Pandas + Matplotlib + Seaborn
+# SQL Project 2 - Exploring a SQLite Sample Database
 **Analyzing the Data:**
 
 * Which tracks appeared in the most playlists? how many playlist did they appear in?
