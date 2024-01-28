@@ -15,8 +15,6 @@ Queries: Perform basic analysis on the data and identify trends.
 * Which rows have a price above 100? between 40 to 50, etc?
 * Sort the table by price. What are the minimum and maximum prices?
 
-## Additional Challenges
-
 **Intermediate Challenge**
 
 * Explore using aggregate functions to look at key statistics about the data (e.g., min, max, average).
@@ -32,6 +30,7 @@ Queries: Perform basic analysis on the data and identify trends.
 * Add more variables to the `stock_info` table and update the data (e.g., sector, industry, etc).
 
 Data Source: https://www.cnbc.com/stocks/
+
 Quest: https://discuss.codecademy.com/t/data-science-independent-project-1-watching-the-stock-market/419943
 
 
@@ -45,5 +44,6 @@ This is the second Python project, this project conducts a basic exploratory ana
 6. Answer Question: What are the Locations with the fastest roller coasters?
 
 Data Source: https://www.kaggle.com/datasets/robikscube/rollercoaster-database/
+
 
 Data: coaster_db.csv
