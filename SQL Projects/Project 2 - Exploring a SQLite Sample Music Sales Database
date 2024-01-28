@@ -1,0 +1,65 @@
+--BASIC
+--1--Which tracks appeared in the most playlists? How many playlist did they appear in?
+-- Top 100 tracks by appearance in playlists.
+SELECT tracks.Name, COUNT(*) AS "How many playlists" FROM playlist_track
+LEFT JOIN tracks ON playlist_track.TrackId = tracks.TrackId
+GROUP BY playlist_track.TrackId
+ORDER BY COUNT(playlist_track.PlaylistId) DESC
+LIMIT 100;
+
+--2--Which track generated the most revenue? 
+SELECT invoice_items.TrackId, tracks.Name, SUM(Invoice_items.UnitPrice) as revenue FROM invoice_items
+LEFT JOIN tracks on invoice_items.TrackId = tracks.TrackId
+GROUP BY invoice_items.TrackId
+ORDER BY revenue DESC
+LIMIT 10;
+
+-- which album?
+SELECT tracks.AlbumId, albums.Title, SUM(invoice_items.UnitPrice) as revenue FROM tracks
+INNER JOIN invoice_items ON tracks.TrackId = invoice_items.TrackId
+INNER JOIN albums ON tracks.AlbumId = albums.AlbumId
+GROUP BY tracks.AlbumId
+ORDER BY revenue DESC
+LIMIT 10;
+
+-- which genre?
+SELECT tracks.GenreId, genres.Name, SUM(invoice_items.UnitPrice) as revenue  FROM tracks
+INNER JOIN invoice_items ON tracks.TrackId = invoice_items.TrackId
+INNER JOIN genres ON tracks.GenreId = genres.GenreId
+GROUP BY tracks.GenreId
+ORDER BY revenue DESC
+LIMIT 5;
+
+--3--Which countries have the highest sales revenue? What percent of total revenue does each country make up?
+SELECT invoices.BillingCountry, SUM(invoice_items.UnitPrice) AS "Country revenue" FROM invoice_items
+JOIN invoices ON invoice_items.InvoiceId = invoices.InvoiceId
+GROUP BY invoices.BillingCountry
+ORDER BY SUM(invoice_items.UnitPrice) DESC
+LIMIT 10;
+
+
+--4--How many customers did each employee support,  what is the average revenue for each sale, and what is their total sale?
+SELECT employees.FirstName, employees.LastName, count(*)
+FROM employees
+INNER JOIN customers ON employees.EmployeeId = customers.SupportRepId 
+GROUP BY employees.EmployeeId
+
+--OR
+WITH Customers_expense AS (
+SELECT c.Customerid,
+	c.SupportRepId,
+	Total
+FROM customers c
+JOIN invoices i
+	ON c.CustomerId = i.CustomerId)
+
+SELECT e.LastName, 
+	e.FirstName, 
+	e.Title,
+	COUNT(DISTINCT CustomerId) "Customers Supported",
+	ROUND (AVG(Total), 2) "Avg Revenue On Each Sale",
+	ROUND (SUM(Total), 2) "Total Revenue"
+FROM employees e
+JOIN customers_expense ce
+	ON e.EmployeeId = ce.SupportRepId
+GROUP BY 1, 2;
