@@ -15,4 +15,5 @@
    strategic decisions and enhancing commercial applications.
    
     
+![image](https://github.com/alfatihahsekar/My-Profile/assets/150194908/d9788605-5434-4b06-ac34-b1869b323f11)
 
